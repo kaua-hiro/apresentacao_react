@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React: Desenvolvendo Interfaces Modernas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="progress-bar" id="progressBar"></div>
+        <div class="slide-counter" id="slideCounter">1 / 12</div>
+
+        <div class="slide active">
+            <h1>REACT</h1>
+            <h2>DESENVOLVENDO INTERFACES MODERNAS COM JAVASCRIPT</h2>
+            <p class="subtitle">Apresentação sobre a biblioteca mais popular para desenvolvimento web</p>
+        </div>
+
+        <div class="slide">
+            <h2>O que é React?</h2>
+            <h3>React - Biblioteca JavaScript para UI</h3>
+            <div class="content">
+                <ul class="bullet-points">
+                    <li><strong>Definição:</strong> Biblioteca JavaScript de código aberto para construir interfaces de usuário</li>
+                    <li><strong>Criador:</strong> Facebook (Meta) em 2013</li>
+                    <li><strong>Foco:</strong> Camada de visualização (View) das aplicações</li>
+                    <li><strong>Filosofia:</strong> Declarativo, componentizado e eficiente</li>
+                    <li><strong>Usado por:</strong> Instagram, Netflix, Airbnb, WhatsApp Web</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Por que React é Tão Popular?</h2>
+            <h3>3 Pilares do Sucesso</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4>Performance</h4>
+                    <p>Virtual DOM otimiza atualizações<br>Renderização eficiente e rápida</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Componentização</h4>
+                    <p>Código reutilizável e modular<br>Facilita manutenção de projetos grandes</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Comunidade Gigante</h4>
+                    <p>Maior ecossistema JavaScript do mundo<br>Suporte ativo da Meta e milhões de desenvolvedores</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Componentes</h2>
+            <h3>Blocos de Construção Reutilizáveis</h3>
+            <div class="content">
+                <p style="font-size: 1.2em; margin-bottom: 20px;"><strong>O que são:</strong> Funções que retornam JSX</p>
+                <div class="code-block">
+function Welcome(props) {
+    return &lt;h1&gt;Olá, {props.name}!&lt;/h1&gt;;
+}</div>
+                <ul class="bullet-points">
+                    <li>Reutilização em toda aplicação</li>
+                    <li>Código organizado e limpo</li>
+                    <li>Fácil manutenção e teste</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>JSX - JavaScript + HTML</h2>
+            <h3>Sintaxe Poderosa e Intuitiva</h3>
+            <div class="content">
+                <p style="font-size: 1.2em; margin-bottom: 20px;"><strong>O que é:</strong> Extensão que permite HTML dentro do JavaScript</p>
+                <div class="code-block">
+const element = &lt;h1&gt;Hello, {name}!&lt;/h1&gt;;
+
+React.createElement('h1', null, 'Hello, ', name, '!');</div>
+                <p style="font-size: 1.2em; color: #e74c3c; font-weight: 600; margin-top: 20px;">
+                    <strong>Benefício:</strong> Código mais legível e produtivo
+                </p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Virtual DOM</h2>
+            <h3>Performance Inteligente</h3>
+            <div class="content">
+                <ul class="bullet-points">
+                    <li><strong>Problema:</strong> Manipular DOM real é lento</li>
+                    <li><strong>Solução React:</strong> Cria representação virtual em memória</li>
+                    <li><strong>Processo:</strong>
+                        <ol style="margin-left: 20px; margin-top: 10px;">
+                            <li>Estado muda → Nova árvore virtual criada</li>
+                            <li>Compara com versão anterior (diff)</li>
+                            <li>Atualiza apenas o que mudou no DOM real</li>
+                        </ol>
+                    </li>
+                    <li><strong>Resultado:</strong> Aplicações até 10x mais rápidas</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>State vs Props</h2>
+            <h3>Gerenciamento de Dados no React</h3>
+            <div class="stats">
+                <div class="stat-item">
+                    <h4>STATE (Estado Interno)</h4>
+                    <ul style="list-style: none; text-align: left; margin-top: 15px;">
+                        <li>• Dados do próprio componente</li>
+                        <li>• Pode ser modificado</li>
+                        <li>• Exemplo: contador, formulários</li>
+                    </ul>
+                </div>
+                <div class="stat-item">
+                    <h4>PROPS (Propriedades)</h4>
+                    <ul style="list-style: none; text-align: left; margin-top: 15px;">
+                        <li>• Dados passados pelo componente pai</li>
+                        <li>• Imutável dentro do componente</li>
+                        <li>• Exemplo: nome do usuário, configurações</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>React vs Concorrentes</h2>
+            <div class="comparison-table">
+                <div class="comparison-item">
+                    <h4>REACT</h4>
+                    <p>Biblioteca focada<br>Flexível<br>JSX<br>Curva média<br><strong>33M+ downloads/semana</strong></p>
+                </div>
+                <div class="comparison-item">
+                    <h4>ANGULAR</h4>
+                    <p>Framework completo<br>Estruturado<br>TypeScript nativo<br>Curva íngreme<br><strong>3M+ downloads</strong></p>
+                </div>
+                <div class="comparison-item">
+                    <h4>VUE</h4>
+                    <p>Progressivo<br>Intuitivo<br>Templates<br>Curva suave<br><strong>4M+ downloads</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Casos de Uso Reais</h2>
+            <h3>Quem Usa React no Mundo Real?</h3>
+            <div class="content">
+                <div style="margin: 30px 0;">
+                    <h4 style="color: #e74c3c; margin-bottom: 15px;">REDES SOCIAIS</h4>
+                    <div class="companies">
+                        <span class="company-tag">Instagram</span>
+                        <span class="company-tag">Facebook</span>
+                        <span class="company-tag">Discord</span>
+                    </div>
+                </div>
+                <div style="margin: 30px 0;">
+                    <h4 style="color: #e74c3c; margin-bottom: 15px;">STREAMING</h4>
+                    <div class="companies">
+                        <span class="company-tag">Netflix</span>
+                        <span class="company-tag">Disney+</span>
+                        <span class="company-tag">Prime Video</span>
+                    </div>
+                </div>
+                <div style="margin: 30px 0;">
+                    <h4 style="color: #e74c3c; margin-bottom: 15px;">E-COMMERCE & PRODUTIVIDADE</h4>
+                    <div class="companies">
+                        <span class="company-tag">Airbnb</span>
+                        <span class="company-tag">Shopify</span>
+                        <span class="company-tag">Notion</span>
+                        <span class="company-tag">Slack</span>
+                    </div>
+                </div>
+                <p style="font-size: 1.5em; font-weight: bold; color: #e74c3c; margin-top: 30px;">
+                    Mais de 10 milhões de sites usam React!
+                </p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Vantagens do React</h2>
+            <h3>Por que Escolher React?</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4>Reutilização</h4>
+                    <p>Componentes modulares reduzem duplicação</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Performance</h4>
+                    <p>Virtual DOM + otimizações automáticas</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Flexibilidade</h4>
+                    <p>Escolha suas próprias ferramentas</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Mercado</h4>
+                    <p>Tecnologia mais demandada no LinkedIn<br>Salários até 30% maiores</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Futuro do React</h2>
+            <h3>O que Vem Por Aí?</h3>
+            <div class="stats">
+                <div class="stat-item">
+                    <h4>REACT 18 (ATUAL)</h4>
+                    <ul style="list-style: none; text-align: left; margin-top: 15px;">
+                        <li>• Concurrent Features</li>
+                        <li>• Suspense aprimorado</li>
+                        <li>• Renderização automática em lotes</li>
+                    </ul>
+                </div>
+                <div class="stat-item">
+                    <h4>PRÓXIMAS VERSÕES</h4>
+                    <ul style="list-style: none; text-align: left; margin-top: 15px;">
+                        <li>• Server Components</li>
+                        <li>• Melhor performance mobile</li>
+                        <li>• Ferramentas aprimoradas</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="margin-top: 30px;">
+                <h4 style="color: #e74c3c; margin-bottom: 15px;">TENDÊNCIAS</h4>
+                <div class="companies">
+                    <span class="company-tag">Integração com IA</span>
+                    <span class="company-tag">Web Assembly</span>
+                    <span class="company-tag">Edge Computing</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Conclusão</h2>
+            <h3>React em 2025: A Escolha Certa</h3>
+            <div class="content">
+                <ul class="bullet-points">
+                    <li><strong>Domina o Mercado:</strong> 40%+ de todos os projetos JavaScript, Tecnologia #1 em vagas de emprego</li>
+                    <li><strong>Continua Evoluindo:</strong> Suporte ativo da Meta, Comunidade de milhões de desenvolvedores</li>
+                    <li><strong>Investimento Inteligente:</strong> Habilidade valorizada no mercado, Base para React Native e Next.js</li>
+                    <li><strong>Comece Hoje:</strong> Documentação excelente, Curva de aprendizado compensadora</li>
+                </ul>
+                
+                <h4 style="color: #e74c3c; margin: 30px 0 15px 0;">Equipe:</h4>
+                <div class="team-members">
+                    <div class="member">Wellington Porto</div>
+                    <div class="member">Kauã Hiro</div>
+                    <div class="member">Carlos Quispe</div>
+                    <div class="member">Matheus Salinas</div>
+                    <div class="member">Felipe Rocha</div>
+                    <div class="member">Elias Lopes</div>
+                </div>
+                
+                <h1 style="margin-top: 40px; font-size: 2.5em;">Obrigado pela atenção!</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button class="nav-btn" id="prevBtn">← Anterior</button>
+        <button class="nav-btn" id="nextBtn">Próximo →</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
